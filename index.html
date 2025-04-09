@@ -1,33 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="eu">
 <head>
+    <meta charset="UTF-8">
     <title>Ordutegia</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            transition: transform 0.4s ease, background-color 0.3s ease;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        td:hover, th:hover {
+            transform: scale(1.1);
+            z-index: 1;
+            position: relative;
+        }
+
+        .mate {
+            background-color: #ffcccc;
+            color: red;
+            font-weight: bold;
+        }
+        .ingelesa {
+            background-color: #cce0ff;
+            color: blue;
+            font-weight: bold;
+        }
+        .gizarte {
+            background-color: #fff9cc;
+            color: #b59b00;
+            font-weight: bold;
+        }
+        .euskara {
+            background-color: #e6ffe6;
+            color: green;
+            font-weight: bold;
+        }
+        .gaztelera {
+            background-color: #ffe6f2;
+            color: #cc0066;
+            font-weight: bold;
+        }
+        .gorputz {
+            background-color: #e0f7fa;
+            color: #00695c;
+            font-weight: bold;
+        }
+        .hautazkoa {
+            background-color: #d6f5d6;
+            color: green;
+            font-weight: bold;
+        }
+        .patio {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
+    <table>
         <tr>
             <th>Ordua</th><th>Astelehena</th><th>Asteartea</th><th>Asteazkena</th><th>Osteguna</th><th>Ostirala</th>
         </tr>
         <tr>
-            <th>8:30</th><td>Gaztelera</td><td>Ingelesa</td><td>Gizarte</td><td>Euskara</td><td>Mate</td>
+            <th>8:30</th>
+            <td class="gaztelera">Gaztelera</td>
+            <td class="ingelesa">Ingelesa</td>
+            <td class="gizarte">Gizarte</td>
+            <td class="euskara">Euskara</td>
+            <td class="mate">Mate</td>
         </tr>
         <tr>
-            <th>9:30</th><td>Ingelesa</td><td>1. Hautazkoa</td><td>Euskara</td><td>2. Hautazkoa</td><td>Ingelesa</td>
+            <th>9:30</th>
+            <td class="ingelesa">Ingelesa</td>
+            <td class="hautazkoa">1. Hautazkoa</td>
+            <td class="euskara">Euskara</td>
+            <td class="hautazkoa">2. Hautazkoa</td>
+            <td class="ingelesa">Ingelesa</td>
         </tr>
         <tr>
-            <th>10:30</th><td colspan="5" style="text-align: center; font-weight: bold; background-color: yellow;">PATIO!!</td>
+            <th>10:30</th>
+            <td colspan="5" class="patio">PATIO!!</td>
         </tr>
         <tr>
-            <th>11:00</th><td>2. Hautazkoa</td><td>3. Hautazkoa</td><td>Gazte</td><td>Gorputz Hezkuntza</td><td>Euskara</td>
+            <th>11:00</th>
+            <td class="hautazkoa">2. Hautazkoa</td>
+            <td class="hautazkoa">3. Hautazkoa</td>
+            <td class="gaztelera">Gaztelera</td>
+            <td class="gorputz">Gorputz Hezkuntza</td>
+            <td class="euskara">Euskara</td>
         </tr>
         <tr>
-            <th>12:00</th><td>1. Hautazkoa</td><td>Mate</td><td>Ing / Mate</td><td>Mate</td><td>Gazte</td>
+            <th>12:00</th>
+            <td class="hautazkoa">1. Hautazkoa</td>
+            <td class="mate">Mate</td>
+            <td>Ing / <span class="mate">Mate</span></td>
+            <td class="mate">Mate</td>
+            <td class="gaztelera">Gaztelera</td>
         </tr>
         <tr>
-            <th>13:00 - 14:30</th><td>GPS</td><td>Bizikidetza</td><td>2. Hautazkoa</td><td></td><td>Gizarte</td>
+            <th>13:00 - 14:30</th>
+            <td>GPS</td>
+            <td>Bizikidetza</td>
+            <td class="hautazkoa">2. Hautazkoa</td>
+            <td></td>
+            <td class="gizarte">Gizarte</td>
         </tr>
         <tr>
-            <th>15:30</th><td>Gizarte</td><td>Gaz / Eus</td><td>3. Hautazkoa</td><td>1. Hautazkoa</td><td>3. Hautazkoa</td>
+            <th>15:30</th>
+            <td class="gizarte">Gizarte</td>
+            <td><span class="gaztelera">Gaz</span> / <span class="euskara">Eus</span></td>
+            <td class="hautazkoa">3. Hautazkoa</td>
+            <td class="hautazkoa">1. Hautazkoa</td>
+            <td class="hautazkoa">3. Hautazkoa</td>
         </tr>
     </table>
 </body>
